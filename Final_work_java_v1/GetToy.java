@@ -7,6 +7,5 @@ public class GetToy {
         createRandomQueue.getRandomQueue(count);
         return createRandomQueue.getPriorityQueue().remove();
     }
-
 }
 

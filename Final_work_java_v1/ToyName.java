@@ -12,4 +12,5 @@ public enum ToyName {
     public double getWeight() {
         return weight;
     }
+
 }

@@ -43,7 +43,6 @@ public class CreateRandomQueue implements Iterator<Toy> {
     public boolean hasNext() {
         return !priorityQueue.isEmpty(); // Используем priorityQueue
     }
-
     @Override
     public Toy next() {
         if (!hasNext()) {

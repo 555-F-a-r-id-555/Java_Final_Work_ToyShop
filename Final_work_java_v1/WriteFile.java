@@ -44,7 +44,5 @@ public class WriteFile {
                 throw new RuntimeException("Ошибка при записи файла: " + e.getMessage());
             }
         }
-
-
     }
 }

@@ -33,6 +33,5 @@ public class Main {
         String fileName3 = "Prize1";
         writeFile.writeToFile(fileName3, directory, count);
 
-
     }
 }
