@@ -31,13 +31,16 @@ public class Main {
         GetToy getToy = new GetToy(createRandomQueue);
         WriteFile writeFile = new WriteFile(getToy);
         WriteJsonFile writeJsonFile = new WriteJsonFile(getToy);
+        WriteToFileAsHtml writeToFileAsHtml = new WriteToFileAsHtml(getToy);
 
-//            writeFile.writeToFile("toys.txt", "output2");
+        writeToFileAsHtml.writeToFileAsHtml("toys.html", "output2");
+
+//        writeFile.writeToFile("toys.txt", "output2");
 
 //        writeFile.writeToFile("toys.csv", "output2");
 
 
-        writeJsonFile.writeToJsonFile("toys.json", "output2");
+//        writeJsonFile.writeToJsonFile("toys.json", "output2");
 
     }
 }
