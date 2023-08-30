@@ -44,7 +44,21 @@ public class WriteToFileAsHtml {
             int size = getToy.queueSize();
 
             try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
-                writer.println("<html><body>");
+                writer.println("<html>");
+
+                writer.println("<head>\n" +
+                        "    <meta charset=\"UTF-8\" />\n" +
+                        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
+                        "    <title>ToyShop</title>\n" +
+                        "  </head>");
+
+                writer.println("<body style='background-color: darkmagenta'>");
+
+                writer.println("<div style='display: flex; justify-content: center; align-items: center; height: 40vh;'>");
+                writer.println("<img src=\"https://i.ibb.co/fqB3ppc/klipartz-com-1.png\" width=\"500\" height=\"200\" alt=\"ToyShop\" />");
+                writer.println("</div>");
+
+                writer.println("<h1 style='color:green'>В этом раунде разыграны следующие игрушки, congratulations!)</h1>");
 
                 for (int i = 0; i < size; i++) {
                     Toy toy = getToy.getToyFromQueue();
@@ -54,7 +68,7 @@ public class WriteToFileAsHtml {
                     String randomColor2 = COLORS2[randomIndex2];
                     System.out.println(randomColor2 + toy.toString() + ANSI_RESET);
 
-                    writer.println("<p style='color:" + randomColor + "'>" + toy.toString() + "</p>");
+                    writer.println("<li  style='color:" + randomColor + "'>" + toy.toString() + "</li>");
                 }
 
                 writer.println("</body></html>");
@@ -73,5 +87,4 @@ public class WriteToFileAsHtml {
             }
         }
     }
-
 }

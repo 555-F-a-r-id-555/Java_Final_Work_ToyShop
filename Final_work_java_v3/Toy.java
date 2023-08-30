@@ -24,9 +24,9 @@ public class Toy {
 
     @Override
     public String toString() {
-        return "Toy{" +
-                "id=" + id +
-                ", name='" + toyName + '\'' +
+        return "Игрушка {" +
+                "под номером: " + id +
+                ", Название игрушки: '" + toyName + '\'' +
                 '}';
     }
 }
