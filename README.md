@@ -1,4 +1,18 @@
-# Java_Final_Work_ToyShop
+<head>
+<style>
+  h1 {
+    color: blue;
+  }
+  h2 {
+    color: green;
+  }
+  p {
+    color: red;
+  }
+</style>
+</head>
+<body>
+<h1>Java_Final_Work_ToyShop<h1>
 
 ## Необходимо написать проект, для розыгрыша в магазине игрушек. Функционал
 
