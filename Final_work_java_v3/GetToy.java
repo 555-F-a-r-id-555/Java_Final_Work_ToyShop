@@ -1,4 +1,4 @@
-package Final_work_java_v2;
+package Final_work_java_v3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class GetToy {
     }
 
     public int queueSize() {
-        return createRandomQueue.size();
+       return createRandomQueue.size();
     }
 
     public List<Toy> getAllToys() {

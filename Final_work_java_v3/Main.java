@@ -1,4 +1,4 @@
-package Final_work_java_v1;
+package Final_work_java_v3;
 //Информация о проекте
 //        Необходимо написать проект, для розыгрыша в магазине игрушек. Функционал
 //        должен содержать добавление новых игрушек и задания веса для выпадения
@@ -16,25 +16,28 @@ package Final_work_java_v1;
 //        Приложение должно запускаться, записывать значения в файл.
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        List<Toy> toyList = new ArrayList<>();
 
-        WriteFile writeFile = new WriteFile();
+        toyList.add(new Toy(ToyName.Robot));
+        toyList.add(new Toy(ToyName.Lego));
+        toyList.add(new Toy(ToyName.Barbie));
 
-//        String fileName = "Prize1.txt";
-        String fileName = "Prize1.csv";
-        String directory = "dir";
-        int count = 5;
-        writeFile.writeToFile(fileName, directory, count);
+        CreateRandomQueue createRandomQueue = new CreateRandomQueue(toyList);
+        GetToy getToy = new GetToy(createRandomQueue);
+        WriteFile writeFile = new WriteFile(getToy);
+        WriteJsonFile writeJsonFile = new WriteJsonFile(getToy);
+
+//            writeFile.writeToFile("toys.txt", "output2");
+
+//        writeFile.writeToFile("toys.csv", "output2");
 
 
-//        String fileName2 = "Prize1.txt";
-        String fileName2 = "Prize1.csv";
-        writeFile.writeToFile(fileName2, directory, count);
-
-//        String fileName3 = "Prize1.txt";
-        String fileName3 = "Prize1.csv";
-        writeFile.writeToFile(fileName3, directory, count);
+        writeJsonFile.writeToJsonFile("toys.json", "output2");
 
     }
 }

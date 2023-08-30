@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CreateRandomQueue implements Iterator<Toy> {
     private int nextId = 1;
-    private Random random = new Random();
+//    private Random random = new Random();
     private PriorityQueue<Toy> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(Toy::getId));
 
 
@@ -26,6 +26,9 @@ public class CreateRandomQueue implements Iterator<Toy> {
         }
     }
 
+    public int size() {
+        return priorityQueue.size();
+    }
 
     @Override
     public boolean hasNext() {

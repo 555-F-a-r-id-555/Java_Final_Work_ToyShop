@@ -1,6 +1,4 @@
-package Final_work_java_v2;
-
-
+package Final_work_java_v3;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -30,7 +30,13 @@ public class Main {
         CreateRandomQueue createRandomQueue = new CreateRandomQueue(toyInfoList);
         GetToy getToy = new GetToy(createRandomQueue);
         WriteFile writeFile = new WriteFile(getToy);
+        WriteJsonFile writeJsonFile = new WriteJsonFile(getToy);
 
-        writeFile.writeToFile("toys.txt", "output", 10);
+
+//    //--- writeFile.writeToFile("toys.txt", "output", 10);--- // старая версия с общим количеством игрушек
+        writeFile.writeToFile("toys.txt", "output"); // первый вариант записи в file.txt
+//        writeFile.writeToFile("toys.csv", "output"); // второй вариант записи в file.csv
+//        writeJsonFile.writeToJsonFile("toys.json", "output"); // третий вариант записи в file.json
+
     }
 }
